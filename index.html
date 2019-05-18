@@ -12,17 +12,36 @@
 	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 	  crossorigin="anonymous"></script>
 	<script src="semantic/dist/semantic.min.js"></script>
+
+	<style type="text/css">
+		#specialDiv {
+			padding: 30px;
+		}
+	</style>
 </head>
 <body>
 	<div class="ui grid">
 	 	<div class="four wide column">
 	  		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		</div>
-		<div class="four wide column"></div>
+		<div class="four wide column" id="specialDiv">
+			<div class="ui labeled input">
+			  <div class="ui label">
+			    Display: 
+			  </div>
+			  <input id="inputText" type="text" placeholder="Text">
+			</div>
+			<div class="ui animated fade button" tabindex="0" onclick="pressButton()">
+			  <div class="visible content">Display text</div>
+			  <div class="hidden content">
+			    Go
+			  </div>
+			</div>
+		</div>
 	 	<div class="four wide column">
 	  		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 	  	</div>
-	  	<div class="four wide column"></div>
+	  	<div class="four wide column" id="outputText"></div>
 	  	<div class="four wide column"></div>
 	  	<div class="four wide column">
 	  		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -31,7 +50,13 @@
 	  	<div class="four wide column">
 	  		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 	  	</div>
-</div>
+	</div>
+	<script type="text/javascript">
+		function pressButton() {
+			var input = document.getElementById('inputText').value;
+			document.getElementById('outputText').innerHTML += input;
+		};
+	</script>
 
 
 </body>
