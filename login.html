@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Semantic UI Practice</title>
+
+	<!-- Semantic UI Link -->
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+
+	<style type="text/css">
+		.grid {
+			height: 100%;
+		}
+		.column {
+			max-width: 450px;
+		}
+	</style>
+</head>
+<body>
+	<div class='ui middle aligned center aligned grid'>
+		<div class="column">
+			<h1 class="ui header">
+				Login to your account
+			</h1>
+			<form class="ui form">
+			  <div class="field">
+			    <input type="text" name="email" placeholder="Email">
+			  </div>
+			  <div class="field">
+			    <input type="text" name="password" placeholder="Password">
+			  </div>
+			  <button class="fluid ui button" type="submit">Login</button>
+			  <button class="fluid ui button" type="submit">Forgot password?</button>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>
