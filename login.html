@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Semantic UI Practice</title>
+	<title>Login</title>
 
 	<!-- Semantic UI Link -->
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
@@ -19,7 +19,12 @@
 		}
 		.column {
 			max-width: 450px;
+			padding: 20px;
+			border: 1.5px solid #0e6eb8;
+			border-radius: 5px;
 		}
+
+
 	</style>
 </head>
 <body>
@@ -29,14 +34,21 @@
 				Login to your account
 			</h1>
 			<form class="ui form">
-			  <div class="field">
-			    <input type="text" name="email" placeholder="Email">
-			  </div>
-			  <div class="field">
-			    <input type="text" name="password" placeholder="Password">
-			  </div>
-			  <button class="fluid ui button" type="submit">Login</button>
-			  <button class="fluid ui button" type="submit">Forgot password?</button>
+				<div class="field">
+					<div class="ui left icon input">
+				  		<input type="text" name="email" placeholder="Email">
+				  		<i class="user icon"></i>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui left icon input">
+				  		<input type="password" name="password" placeholder="Password">
+				  		<i class="keyboard icon"></i>
+					</div>
+				</div>	
+			  	<button class="fluid blue ui button" type="submit">Login</button>
+			  	<br>
+			  	<button class="fluid basic ui button" type="submit">Forgot password?</button>
 			</form>
 		</div>
 	</div>
