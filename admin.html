@@ -15,24 +15,40 @@
 
 		<!-- STYLING -->
 		<style type="text/css">
-			
+			#topHeader {
+				height: 10%;
+				padding: 20px;
+				color: #1D3557;
 			}
-
+			#mainGrid {
+				padding: 20px;
+			}
+			#mainGrid > .column {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+			#personFeed > * {
+				margin-bottom: 10px;
+			}
+			#profileRibbon {
+				margin-left: 13px;
+			}
 		</style>
 
 	</head>
 	<body>
-		<h1 class="ui header">
+		<h1 class="ui header" id="topHeader">
 			<i class="eye icon"></i>
 			Welcome to the Admin Page!
 		</h1>
-
-		<div class="ui three column grid">
+		<div class="ui three column grid" id="mainGrid">
+			<!-- ORDERS COLUMN -->
 			<div class="column">
 				<h2 class="ui header">
 					Orders
 				</h2>
 				<br>
+				<!-- Orders menu -->
 				<div class="ui fluid vertical menu">
 				  <a class="active blue item">
 				    Orders
@@ -54,6 +70,7 @@
 				  </div>
 				</div>
 				<br>
+				<!-- Order messages tab -->
 				<div class="ui top attached tabular menu">
 				  <a class="active item">
 				    Received
@@ -62,6 +79,7 @@
 				    Processed
 				  </a>
 				</div>
+				<!-- Order messages list -->
 				<div class="ui bottom attached segment">
 				  <div class="ui relaxed divided list">
 					  <div class="item">
@@ -95,15 +113,17 @@
 					</div>
 				</div>
 			</div>
+			<!-- CUSTOMERS COLUMN -->
 			<div class="column">
 				<h2 class="ui header">
 					Customers
 				</h2>
 				<br>
+				<!-- Customer card -->
 				<div class="ui fluid card">
 				  <div class="ui fluid image">
 				    <img class="ui image" src="images/client.jpeg">
-				    <div class="ui blue ribbon label">
+				    <div class="ui blue ribbon label" id="profileRibbon">
 				    	Top Customer!
 				    </div>
 				  </div>
@@ -121,7 +141,8 @@
 				  </div>
 				</div>
 				<br>
-				<div class="ui feed">
+				<!-- Customers feed -->
+				<div class="ui feed" id="personFeed">
 				  <div class="event">
 				    <div class="label">
 				      <img class="ui avatar image" src="images/client.jpeg">
@@ -147,13 +168,14 @@
 				    </div>
 				  </div>
 				</div>
-
 			</div>
+			<!-- ITEMS COLUMN -->
 			<div class="column">
 				<h2 class="ui header">
 					Items
 				</h2>
 				<br>
+				<!-- Category dropdown -->
 				<div class="ui fluid selection dropdown">
 				  <input type="hidden" name="category">
 				  <i class="dropdown icon"></i>
@@ -168,6 +190,7 @@
 				  </div>
 				</div>
 				<br>
+				<!-- Items list -->
 				<div>
 					<div class="ui raised segment">Item 1</div>
 					<div class="ui raised segment">Item 2</div>
@@ -176,11 +199,10 @@
 					<div class="ui raised segment">Item 5</div>
 					<div class="ui raised segment">Item 6</div>
 				</div>
-
 			</div>
 		</div>
 
-
+		<!-- SCRIPT FOR DROPDOWN -->
 		<script type="text/javascript">
 			$('.ui.dropdown').dropdown();
 		</script>
